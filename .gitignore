@@ -1,0 +1,25 @@
+# Environment variables 
+.env
+.env.local
+.env.production
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# React / Node
+node_modules/
+/client/build
+npm-debug.log*
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# Misc
+*.log
