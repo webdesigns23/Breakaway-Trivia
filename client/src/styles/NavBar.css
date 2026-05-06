@@ -1,0 +1,27 @@
+
+.navbar {
+  background-color: #332c2c;
+  padding: 2px;
+  margin: 5px;
+  border-color: goldenrod;
+  border-style: groove;
+  font-size: 18px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid goldenrod;
+}
+
