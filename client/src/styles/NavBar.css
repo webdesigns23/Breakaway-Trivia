@@ -1,10 +1,9 @@
 
 .navbar {
-  background-color: #332c2c;
-  padding: 2px;
+  background-color: rgba(37, 37, 39, 0.5);
   margin: 5px;
-  border-color: goldenrod;
-  border-style: groove;
+  border: 5px double black;
+  border-radius: 16px;
   font-size: 18px;
 }
 
@@ -22,6 +21,6 @@
 }
 
 .nav-links a.active {
-  border-bottom: 2px solid goldenrod;
+  border-bottom: 2px ridge rgb(216 213 206);
 }
 

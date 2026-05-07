@@ -25,11 +25,11 @@ const teams = [
 	},
 	{
 		id: "4", 
-		name: "Utah Mammoth",
-		primary_color: "#000000",
-		secondary_color: "#FFFFFF",
-		accent_color: "#6CACE4",
-		logo: "https://static.wikia.nocookie.net/logopedia/images/9/9c/UtahMammoth.svg/revision/latest/scale-to-width-down/1000?cb=20250803172824"
+		name: "Buffalo Sabres",
+		primary_color: "#003087",
+		secondary_color: "#FFB81C",
+		accent_color: "#FFFFFF",
+		logo: "https://cdn.freebiesupply.com/logos/large/2x/buffalo-sabres-logo.png"
 	},
 	{
 		id: "5", 

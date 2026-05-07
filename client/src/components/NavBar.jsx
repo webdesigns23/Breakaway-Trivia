@@ -4,13 +4,16 @@ import '../styles/NavBar.css'
 export default function NavBar() {
   
 	return (
-    <nav className="navbar">
-      <img src="src/assets/logo.png" alt="hockey player"/>
-      <ul className="nav-links">
+    <>
+    <h1>Breakaway Trivia</h1>    
+    <nav className="navbar">      		
+      <ul className="nav-links">     
         <NavLink to="/">Home</NavLink>
         <NavLink to="/trivia_game">Play</NavLink>
         <NavLink to="/score">Scores</NavLink>
       </ul>
     </nav>
+    <img src="src/assets/logo3.png" alt="hockey player"/>     
+    </>
   );
 }

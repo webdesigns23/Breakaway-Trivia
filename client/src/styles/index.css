@@ -1,31 +1,75 @@
 #root {
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #332c2c;
+  background-image: url("../assets/ice5.jpg");
+  border: ridge;
+  border-color: #FFFF;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
 }
 
 img {
-  max-width: 20%;
-  border: ridge;
-  border-color: rgb(177, 170, 154);
-  
+  max-width: 95%;
 }
 
 h1 {
-	color: white;
+	color: rgb(43, 38, 38);
+    font-size: 65px;
+    margin: 10px;
+    text-transform: uppercase;
+    font-family: system-ui;
 }
 
-h2{
+h2 {
   margin-top: 50px;
-  background-color: rgb(223, 222, 216);
+  background-color: rgba(175, 40, 36, 0.5);
   border-style: groove;
   border-color: rgb(217, 216, 216);
 }
 
-p {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
-  color: white;
+h3 {
+  margin-top: 50px;
+  background-color: rgba(36, 85, 175, 0.5);
+  border-style: groove;
+  border-color: rgb(217, 216, 216);
 }
+
+h4 {
+  text-transform: uppercase;
+}
+
+
+p {
+  font-size: 20px;
+  color: rgb(56, 56, 65);
+}
+
+form {
+  color: rgb(82, 78, 78);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 1rem;
+ 
+}
+
+.gallery-item {
+  background-color: rgba(187, 182, 182, 0.5);
+  border-radius: 16px;
+  border: 2px groove rgb(172, 171, 171);
+  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+  padding: 8px;
+}
+
+.gallery-item:hover {
+  border: 3px ridge black
+}
+
