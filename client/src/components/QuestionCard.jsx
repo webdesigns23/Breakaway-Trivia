@@ -21,12 +21,14 @@ export default function QuestionCard({question, checkAnswer}) {
 		const shuffled = shuffleAnswers(allAnswers);
 		setAnswers(shuffled)
 
+		// reset selection
+		setSelected(null);
+
 	}, [question]);
 
 	// handle selection clicked
 	function handleClick(answer){
-		if (!selected)
-			return;
+		if (selected) return;
 
 		setSelected(answer);
 		// check answer

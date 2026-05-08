@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import teams from '../data/teams';
 import TeamSelector from './TeamSelector';
 import QuestionCard from './QuestionCard';
+import GameOver from './GameOver';
 
 
 export default function TriviaGame() {
@@ -48,8 +49,7 @@ export default function TriviaGame() {
 					setCurrentIndex(currentIndex + 1);
 				} else {
 					setGameOver(true);
-				}
-							
+				}							
 			}
 
 
@@ -69,6 +69,12 @@ export default function TriviaGame() {
 						question={questions[currentIndex]}
 						checkAnswer={checkAnswer}/>
 				</div>
+			)}
+
+			{gameOver && (
+				<GameOver 
+					score={score}
+					total={questions.length}/>
 			)}
 			
 		</>
