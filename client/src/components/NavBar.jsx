@@ -12,8 +12,7 @@ export default function NavBar() {
         <NavLink to="/trivia_game">Play</NavLink>
         <NavLink to="/score">Scores</NavLink>
       </ul>
-    </nav>
-    <img src="src/assets/logo3.png" alt="hockey player"/>     
+    </nav>    
     </>
   );
 }

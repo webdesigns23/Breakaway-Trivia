@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
 import NavBar from './components/NavBar';
-import QuestionCard from './components/QuestionsCard';
+import QuestionCard from './components/QuestionCard';
 import TriviaGame from './components/TriviaGame';
 import TeamSelector from './components/TeamSelector';
 import Score from './components/Score';
