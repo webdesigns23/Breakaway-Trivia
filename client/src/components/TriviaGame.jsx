@@ -9,7 +9,10 @@ export default function TriviaGame() {
 		const [ teamSelection, setTeamSelection ] = useState(null)
 		const [ loading, setLoading ] = useState(false);
 		const [ questions, setQuestions ] = useState([]);
-		const [ currentIndex, setCurrrentIndex ] = useState(0);
+		const [ currentIndex, setCurrentIndex ] = useState(0);
+		const [ score, setScore ] = useState(0);
+		const [ gameOver, setGameOver ] = useState(false);
+
 
 		// fetch questions	
 		useEffect(() => {
@@ -37,6 +40,19 @@ export default function TriviaGame() {
 			fetchQuestions();
 			}, [teamSelection]);
 
+			// check answer add one to score
+			function checkAnswer(correct) {
+				correct && setScore(score + 1);	
+				// next question unless end of game
+				if (currentIndex + 1 < questions.length) {
+					setCurrentIndex(currentIndex + 1);
+				} else {
+					setGameOver(true);
+				}
+							
+			}
+
+
 	return (
 		<>
 			{!teamSelection && (
@@ -49,7 +65,9 @@ export default function TriviaGame() {
 
 			{teamSelection && !loading && questions?.length > 0 && (
 				<div>
-					<QuestionCard question={questions[currentIndex]}/>
+					<QuestionCard 
+						question={questions[currentIndex]}
+						checkAnswer={checkAnswer}/>
 				</div>
 			)}
 			

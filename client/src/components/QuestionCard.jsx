@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-export default function QuestionCard({question}) {
+export default function QuestionCard({question, checkAnswer}) {
 	const [ answers, setAnswers ] = useState([]);
+	const [ selected, setSelected ] = useState(null);
 	
 	// shuffle all answers
 	useEffect(() => {
@@ -22,12 +23,22 @@ export default function QuestionCard({question}) {
 
 	}, [question]);
 
+	// handle selection clicked
+	function handleClick(answer){
+		if (!selected)
+			return;
+
+		setSelected(answer);
+		// check answer
+		checkAnswer(answer === question.correct)
+	}
+
 	return (
 		<div className='question-card'>
 			<h2>{question.question}</h2>
 			<div className='answers'>
 				{answers.map((answer, i ) => (
-					<button key={i}>
+					<button key={i} onClick={()=> handleClick(answer)}>
 						{answer}
 					</button>
 				))}
