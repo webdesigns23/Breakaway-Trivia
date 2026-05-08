@@ -17,11 +17,11 @@ const teams = [
 	},
 	{
 		id: "3", 
-		name: "Dallas Stars",
-		primary_color: "#006847",
-		secondary_color: "#A4A9AD",
-		accent_color: "#000000",
-		logo: "https://cdn.freebiesupply.com/logos/large/2x/dallas-stars-logo.png"
+		name: "Anaheim Ducks",
+		primary_color: "#F47A38",
+		secondary_color: "#B9975B",
+		accent_color: "#C1C6C8",
+		logo: "https://cdn.freebiesupply.com/logos/large/2x/anaheim-ducks-logo.png"
 	},
 	{
 		id: "4", 
@@ -49,11 +49,11 @@ const teams = [
 	},
 	{
 		id: "7", 
-		name: "San Jose Sharks",
-		primary_color: "#006D75",
-		secondary_color: "#EA7200",
-		accent_color: "#000000",
-		logo: "https://cdn.freebiesupply.com/logos/large/2x/san-jose-sharks-logo.png"
+		name: "Montreal Canadians",
+		primary_color: "#AF1E2D",
+		secondary_color: "#192168",
+		accent_color: "#FFFFFF",
+		logo: "https://cdn.freebiesupply.com/logos/large/2x/montreal-canadiens-logo.png"
 	},
 	{
 		id: "8", 

@@ -5,7 +5,7 @@ export default function TeamSelector({teams, onSelect}) {
 
 	return (
 		<>
-			<h2>Select a Team to Begin Trivia Game</h2>
+			<h2>Select a Team to Begin!</h2>
 			<TeamGallery teams={teams} onSelect={onSelect}/>
 		</>
 	)

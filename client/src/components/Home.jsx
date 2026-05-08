@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
 	return (
@@ -14,6 +15,10 @@ export default function Home() {
 			<p>
 				Whether you're a lifelong fan or bleed your team's colors, this is your chance to step away from the daily grind, lace up, and prove you know the game better than anyone in the room. No skates required, just passion for the sport and a head full of hockey history.
 			</p>
+			<Link to={'/trivia_game'}>
+				<button>Start Trivia</button>
+			</Link>
+			
 		</>
 	)
 }

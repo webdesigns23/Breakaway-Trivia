@@ -2,13 +2,16 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import teams from '../data/teams';
 import TeamSelector from './TeamSelector';
+import QuestionCard from './QuestionCard';
 
 
 export default function TriviaGame() {
 		const [ teamSelection, setTeamSelection ] = useState(null)
 		const [ loading, setLoading ] = useState(false);
 		const [ questions, setQuestions ] = useState([]);
-	
+		const [ currentIndex, setCurrrentIndex ] = useState(0);
+
+		// fetch questions	
 		useEffect(() => {
 			if (!teamSelection) return;
 	
@@ -36,23 +39,17 @@ export default function TriviaGame() {
 
 	return (
 		<>
-			<TeamSelector teams={teams} onSelect={setTeamSelection}/>
-
-			{!teamSelection && <p>Select a Team to Begin Trivia Game</p>}
-
-			{loading && <p>Loading Questions...</p>}
-
-			{!loading && questions?.length > 0 && (
+			{!teamSelection && (
 				<div>
-					{questions.map((q , id) => (
-						<div key={id}>
-							<h3>{q.question}</h3>
-							<button>{q.wrong[0]}</button>
-							<button>{q.wrong[1]}</button>
-							<button>{q.wrong[2]}</button>
-							<button>{q.correct}</button>
-						</div>
-					))}
+					<TeamSelector teams={teams} onSelect={setTeamSelection}/>
+				</div>
+			)}
+			
+			{teamSelection && loading && (<p>Loading Questions...</p>)}
+
+			{teamSelection && !loading && questions?.length > 0 && (
+				<div>
+					<QuestionCard question={questions[currentIndex]}/>
 				</div>
 			)}
 			
