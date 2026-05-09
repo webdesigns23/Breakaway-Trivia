@@ -52,6 +52,15 @@ export default function TriviaGame() {
 				}							
 			}
 
+			// reset game
+			function resetGame() {
+				setTeamSelection(null);
+				setQuestions([])
+				setCurrentIndex(0);
+				setScore(0);
+				setGameOver(false);
+			}
+
 
 	return (
 		<>
@@ -65,16 +74,22 @@ export default function TriviaGame() {
 
 			{teamSelection && !loading && questions?.length > 0 && (
 				<div>
+					<h1 style={{color:teamSelection.primary_color, fontSize: '30px'}}>{teamSelection.name} Trivia</h1>
+					<img src={teamSelection.logo} style={{width: '50%'}} alt={teamSelection.name} />
+					<h2>Question {currentIndex + 1}/{questions.length}</h2>
 					<QuestionCard 
 						question={questions[currentIndex]}
-						checkAnswer={checkAnswer}/>
+						checkAnswer={checkAnswer}
+						teamSelection={teamSelection}
+						total={questions.length}/>
 				</div>
 			)}
 
 			{gameOver && (
 				<GameOver 
 					score={score}
-					total={questions.length}/>
+					total={questions.length}
+					resetGame={resetGame}/>
 			)}
 			
 		</>

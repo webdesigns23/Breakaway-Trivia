@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function QuestionCard({question, checkAnswer}) {
+export default function QuestionCard({question, checkAnswer, teamSelection, total}) {
 	const [ answers, setAnswers ] = useState([]);
 	const [ selected, setSelected ] = useState(null);
 	
@@ -32,15 +32,18 @@ export default function QuestionCard({question, checkAnswer}) {
 
 		setSelected(answer);
 		// check answer
-		checkAnswer(answer === question.correct)
+		checkAnswer(answer === question.correct)? <p>correct</p> : <p>Wrong</p>
 	}
+
+
 
 	return (
 		<div className='question-card'>
-			<h2>{question.question}</h2>
+			
+			<p className='question'>{question.question}</p>
 			<div className='answers'>
-				{answers.map((answer, i ) => (
-					<button key={i} onClick={()=> handleClick(answer)}>
+				{answers.map((answer, index ) => (
+					<button className='question-button' key={index} onClick={()=> handleClick(answer)}>
 						{answer}
 					</button>
 				))}

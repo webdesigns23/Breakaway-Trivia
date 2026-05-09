@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Home() {
 	return (
 		<>
+			<h1>Breakaway Trivia</h1>
 			<img src="src/assets/logo3.png" alt="hockey player"/> 
 			<h2>Take a breakaway from work and test your hockey knowledge</h2>
 			<p>

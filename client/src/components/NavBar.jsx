@@ -4,8 +4,7 @@ import '../styles/NavBar.css'
 export default function NavBar() {
   
 	return (
-    <>
-    <h1>Breakaway Trivia</h1>    
+    <>    
     <nav className="navbar">      		
       <ul className="nav-links">     
         <NavLink to="/">Home</NavLink>
