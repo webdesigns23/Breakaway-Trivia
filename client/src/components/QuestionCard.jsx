@@ -32,22 +32,41 @@ export default function QuestionCard({question, checkAnswer, teamSelection, tota
 
 		setSelected(answer);
 		// check answer
-		checkAnswer(answer === question.correct)? <p>correct</p> : <p>Wrong</p>
+		checkAnswer(answer === question.correct);
 	}
 
 
 
 	return (
-		<div className='question-card'>
-			
-			<p className='question'>{question.question}</p>
+		<div className='trivia-card'>
+
+			<div className='question-card'>
+			<img src={teamSelection.logo} 
+				style={{width: '45%'}} 
+				alt={teamSelection.name} />
+			<h2 style={{
+				color:teamSelection.primary_color, 
+				fontSize: '3vw', 
+				background: 'none'}}>
+				{question.question}</h2>
+			</div>
+
 			<div className='answers'>
 				{answers.map((answer, index ) => (
-					<button className='question-button' key={index} onClick={()=> handleClick(answer)}>
+					<button className='question-button' 
+						style={{
+							color:teamSelection.accent_color, 
+							background: teamSelection.primary_color,
+							borderColor: teamSelection.secondary_color,
+							borderWidth: '6px',
+							borderStyle: 'ridge'
+						}}
+						key={index} onClick={()=> handleClick(answer)}>
 						{answer}
 					</button>
 				))}
-			</div>			
+			</div>	
+
 		</div>
 	)
 }

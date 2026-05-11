@@ -14,7 +14,7 @@ body {
 }
 
 img {
-  max-width: 95%;
+  max-width: 75%;
 }
 
 h1 {
@@ -22,14 +22,11 @@ h1 {
     font-size: 65px;
     margin: 10px;
     text-transform: uppercase;
-    font-family: system-ui;
+    font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 h2 {
-  margin-top: 50px;
   background-color: rgba(175, 40, 36, 0.5);
-  border: 3px double black;
-  border-radius: 10px;
 }
 
 h3 {
@@ -47,12 +44,27 @@ h4 {
 p {
   font-size: 20px;
   color: rgb(56, 56, 65);
+  font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
+.button {
+  color: white;
+  background-color: rgba(1, 1, 1, 0.75);
+  width: 120px;
+  height: 30px;
+  border-radius: 10%;
+  border: 2px ridge black;
+  cursor: pointer;
+}
 
+.button:hover {
+  transform: scale(1.1);
+}
+
+/* Select Team */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
  
 }
@@ -78,45 +90,37 @@ p {
   padding: 16px;
 }
 
-.button {
-  color: white;
-  background-color: rgba(1, 1, 1, 0.75);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 5px solid black;
-  cursor: pointer;
-}
-
-.button:hover {
-  transform: scale(1.1);
-}
-
-.question-button {
-    color: #e4e4e4;
-    background: #2f2b2b;
-    border-radius: 4px;
-    display: block;
-    margin-bottom: 10px;
-    height: 63px;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-    opacity: 75%;
-    padding: 0 32px;
-    font-size: 16px;
-    line-height: 14px;
-}
-
-.question-card {
+/* Trivia Game */
+.trivia-card {
   background-color: rgba(187, 182, 182, 0.5);
   border-radius: 16px;
   border: 2px groove rgb(172, 171, 171);
   box-shadow: 0 10px 22px rgba(0,0,0,.12);
   padding: 8px;
+  margin: 0px 100px 50px 100px; 
+}
 
+.question-card {
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 0px 50px 0px 50px;
+}
+
+.question-button {
+    color: #e4e4e4;
+    background: #2f2b2b;
+    border: 5px ridge;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    height: 63px;
+    width: 75%;
+    text-align: center;
+    cursor: pointer;
+    opacity: 85%;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 14px;
+    font-weight: bold;
 }

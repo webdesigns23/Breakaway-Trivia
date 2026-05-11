@@ -25,14 +25,6 @@ const teams = [
 	},
 	{
 		id: "4", 
-		name: "Buffalo Sabres",
-		primary_color: "#003087",
-		secondary_color: "#FFB81C",
-		accent_color: "#FFFFFF",
-		logo: "https://cdn.freebiesupply.com/logos/large/2x/buffalo-sabres-logo.png"
-	},
-	{
-		id: "5", 
 		name: "Vegas Golden Knights",
 		primary_color: "#B4975A",
 		secondary_color: "#333F42",
@@ -40,12 +32,12 @@ const teams = [
 		logo: "https://cdn.freebiesupply.com/logos/large/2x/vegas-golden-knights-logo.png"
 	},
 	{
-		id: "6", 
-		name: "Carolina Hurricanes",
-		primary_color: "#C8102E",
-		secondary_color: "#000000",
+		id: "5", 
+		name: "Buffalo Sabres",
+		primary_color: "#003087",
+		secondary_color: "#FFB81C",
 		accent_color: "#FFFFFF",
-		logo: "https://cdn.freebiesupply.com/logos/large/2x/carolina-hurricanes-logo.png"
+		logo: "https://cdn.freebiesupply.com/logos/large/2x/buffalo-sabres-logo.png"
 	},
 	{
 		id: "7", 
@@ -54,6 +46,14 @@ const teams = [
 		secondary_color: "#192168",
 		accent_color: "#FFFFFF",
 		logo: "https://cdn.freebiesupply.com/logos/large/2x/montreal-canadiens-logo.png"
+	},
+	{
+		id: "6", 
+		name: "Carolina Hurricanes",
+		primary_color: "#C8102E",
+		secondary_color: "#000000",
+		accent_color: "#FFFFFF",
+		logo: "https://cdn.freebiesupply.com/logos/large/2x/carolina-hurricanes-logo.png"
 	},
 	{
 		id: "8", 

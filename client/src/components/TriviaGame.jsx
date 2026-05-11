@@ -74,9 +74,9 @@ export default function TriviaGame() {
 
 			{teamSelection && !loading && questions?.length > 0 && (
 				<div>
-					<h1 style={{color:teamSelection.primary_color, fontSize: '30px'}}>{teamSelection.name} Trivia</h1>
-					<img src={teamSelection.logo} style={{width: '50%'}} alt={teamSelection.name} />
-					<h2>Question {currentIndex + 1}/{questions.length}</h2>
+					<h1 style={{color:teamSelection.primary_color, fontSize: '50px'}}>{teamSelection.name} Trivia</h1>
+					{/* <img src={teamSelection.logo} style={{width: '50%'}} alt={teamSelection.name} /> */}
+					<p>Question {currentIndex + 1}/{questions.length}</p>
 					<QuestionCard 
 						question={questions[currentIndex]}
 						checkAnswer={checkAnswer}
