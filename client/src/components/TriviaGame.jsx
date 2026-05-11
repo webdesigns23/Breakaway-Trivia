@@ -72,10 +72,10 @@ export default function TriviaGame() {
 			
 			{teamSelection && loading && (<p>Loading Questions...</p>)}
 
-			{teamSelection && !loading && questions?.length > 0 && (
+			{teamSelection && !loading && questions?.length && !gameOver > 0 && (
 				<div>
 					<h1 style={{color:teamSelection.primary_color, fontSize: '50px'}}>{teamSelection.name} Trivia</h1>
-					{/* <img src={teamSelection.logo} style={{width: '50%'}} alt={teamSelection.name} /> */}
+					
 					<p>Question {currentIndex + 1}/{questions.length}</p>
 					<QuestionCard 
 						question={questions[currentIndex]}
@@ -89,6 +89,7 @@ export default function TriviaGame() {
 				<GameOver 
 					score={score}
 					total={questions.length}
+					teamSelection={teamSelection}
 					resetGame={resetGame}/>
 			)}
 			

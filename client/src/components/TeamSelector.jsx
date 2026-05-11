@@ -5,7 +5,7 @@ export default function TeamSelector({teams, onSelect}) {
 
 	return (
 		<>
-			<h2>Select a Team to Begin!</h2>
+			<h1>Select a Team to Begin!</h1>
 			<TeamGallery teams={teams} onSelect={onSelect}/>
 		</>
 	)

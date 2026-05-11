@@ -36,7 +36,6 @@ export default function QuestionCard({question, checkAnswer, teamSelection, tota
 	}
 
 
-
 	return (
 		<div className='trivia-card'>
 
