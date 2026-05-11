@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 export default function QuestionCard({question, checkAnswer, teamSelection, total}) {
 	const [ answers, setAnswers ] = useState([]);
 	const [ selected, setSelected ] = useState(null);
+	const [ timeLeft, setTimeLeft ] = useState(30);
 	
 	// shuffle all answers
 	useEffect(() => {
@@ -21,10 +22,28 @@ export default function QuestionCard({question, checkAnswer, teamSelection, tota
 		const shuffled = shuffleAnswers(allAnswers);
 		setAnswers(shuffled)
 
-		// reset selection
+		// reset selection & timer
 		setSelected(null);
+		setTimeLeft(30);
 
 	}, [question]);
+
+	// question timer 10 seconds
+	useEffect(() => {
+		if (selected) return;
+
+		if (timeLeft === 0) {
+			checkAnswer(false);
+			return;
+		}
+
+		const timer = setTimeout(() => {
+			setTimeLeft(timeLeft - 1);
+		}, 1000);
+
+		return () => clearTimeout(timer);
+
+	},[timeLeft, selected]);
 
 	// handle selection clicked
 	function handleClick(answer){
@@ -38,18 +57,33 @@ export default function QuestionCard({question, checkAnswer, teamSelection, tota
 
 	return (
 		<div className='trivia-card'>
-
+			
 			<div className='question-card'>
-			<img src={teamSelection.logo} 
-				style={{width: '45%'}} 
-				alt={teamSelection.name} />
-			<h2 style={{
-				color:teamSelection.primary_color, 
-				fontSize: '3vw', 
-				background: 'none'}}>
-				{question.question}</h2>
+				
+				<img src={teamSelection.logo} 
+					style={{width: '45%'}} 
+					alt={teamSelection.name} />
+				<div>
+					<h2 style={{
+						color:teamSelection.secondary_color, 
+						fontSize: '3vw', 
+						background: 'none'}}>
+						{question.question}
+					</h2>
+					<progress
+						value={timeLeft}
+						max={30}
+						style={{width: '100%', 
+						height: '50px',
+						accentColor: teamSelection.accent_color}}>
+					</progress>
+					
+				</div>
+					
+									
 			</div>
-
+			
+			
 			<div className='answers'>
 				{answers.map((answer, index ) => (
 					<button className='question-button' 
@@ -60,7 +94,10 @@ export default function QuestionCard({question, checkAnswer, teamSelection, tota
 							borderWidth: '6px',
 							borderStyle: 'ridge'
 						}}
-						key={index} onClick={()=> handleClick(answer)}>
+						key={index} 
+						onClick={()=> handleClick(answer)}
+						disabled={selected !== null}
+						>
 						{answer}
 					</button>
 				))}
