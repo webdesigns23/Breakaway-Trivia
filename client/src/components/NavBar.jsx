@@ -7,9 +7,9 @@ export default function NavBar() {
     <>    
     <nav className="navbar">      		
       <ul className="nav-links"> 
-           
+        <p>Stanley Cup Playoffs 2026 Edition</p>
         <NavLink to="/">
-          <img className='logo' src="src/assets/logo1.png" alt="hockey player"/>  
+          <img className='logo-name' src="src/assets/logo8.PNG" alt="hockey player"/>  
         </NavLink>
         <NavLink to="/trivia_game">Play</NavLink>
         <NavLink to="/score">Scores</NavLink>

@@ -70,7 +70,17 @@ export default function TriviaGame() {
 				</div>
 			)}
 			
-			{teamSelection && loading && (<p>Loading Questions...</p>)}
+			{teamSelection && loading && (
+				<div className='loading'>
+					<img style= {{ width: '350px'}}
+						src={teamSelection.logo} alt={teamSelection.name}/>
+					<img className='team-spinner'
+						src= 'src/assets/zamboni.png' 
+						alt= 'zamboni'	
+					/>
+					<h2 >Entering {teamSelection.name} Territory!</h2>
+				</div>
+			)}
 
 			{teamSelection && !loading && questions?.length && !gameOver > 0 && (
 				<div>

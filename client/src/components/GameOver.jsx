@@ -19,13 +19,13 @@ export default function GameOver({score, total, resetGame, teamSelection}) {
 				<img src={teamSelection.logo} 
 					style={{width: '45%'}} 
 					alt={teamSelection.name} />
-				{score <= 2 && (
+				{score <= 5 && (
 					<h3 style={messageStyle}>"Sent to the AHL. Come back when you know your team better!"</h3>
 				)}
-				{score > 2 && score <= 4 && (
+				{score > 5 && score <= 9 && (
 					<h3 style={messageStyle}>"Not quite playoff material..."</h3>
 				)}
-				{score === 5 && (
+				{score === 10 && (
 					<h3 style={messageStyle}>"Presidents Trophy Winner!"</h3>
 				)}
 				

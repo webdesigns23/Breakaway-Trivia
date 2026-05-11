@@ -5,6 +5,12 @@ export default function Score() {
 		<>
 			<h1>Score Sheet</h1>
 			<p>Coming Soon...</p>
+			<div className='loading'>
+					<img className='team-spinner'
+						src= "src/assets/logo1.png"
+						alt='hockey player'	
+					/>
+				</div>
 		</>
 	)
 }

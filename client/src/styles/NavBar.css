@@ -1,17 +1,15 @@
 
 .navbar {
-  margin: 5px;
   font-size: 18px;
-  background-color: white;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  flex-direction: column;
   align-content: center;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
 }
 
 .nav-links a {
@@ -23,6 +21,8 @@
   border-bottom: 2px ridge rgb(216 213 206);
 }
 
-.logo {
-  width: 100px;
+.logo-name {
+  width: 600px;
+  border-radius: 20px;
+  padding: 10px;
 }

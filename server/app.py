@@ -24,7 +24,7 @@ def get_questions():
 		messages=[
 			{
 				"role": "user",
-				"content": f"""Generate 5 trivia questions about the NHL team {team}.
+				"content": f"""Generate 10 trivia questions about the NHL team {team}.
 				Return JSON only, no extra text, no markdown, no backticks, in this format:
 				[
 				{{
