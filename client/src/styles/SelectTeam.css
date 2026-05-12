@@ -1,0 +1,27 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+ 
+}
+
+.gallery-item {
+  background-color: rgba(187, 182, 182, 0.5);
+  border-radius: 16px;
+  border: 2px groove rgb(172, 171, 171);
+  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+  padding: 8px;
+}
+
+.gallery-item:hover {
+  border: 3px ridge black
+}
+
+.gallery-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+}

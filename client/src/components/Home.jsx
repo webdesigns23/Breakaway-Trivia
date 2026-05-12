@@ -3,17 +3,15 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
 	return (
-		<>
-			{/* <h1>Breakaway Trivia</h1> */}
-			
-			{/* <img className='logo-name' src="src/assets/logo2.png" alt="hockey player"/>  */}
+		<>				
 			<img style={{width: '400px'}} src="src/assets/logo1.png" alt="hockey player"/> 			
 			
 			<h2>
 				Take a breakaway from work and test your hockey knowledge
 			</h2>
+			<h3>Drop the Puck!</h3>
 			<Link to={'/trivia_game'}>
-				<button className='button'>Drop the Puck</button>
+				<button style={{width:'300px', height:'80px', borderRadius:'25px'}} className='button'>Play Now</button>
 			</Link>
 			<p>
 				Think you know your team inside and out? From legendary players and iconic moments to stats, trades, and championship runs. 

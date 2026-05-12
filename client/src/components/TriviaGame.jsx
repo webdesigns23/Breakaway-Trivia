@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import teams from '../data/teams';
+import '../styles/TriviaGame.css'
 import TeamSelector from './TeamSelector';
 import QuestionCard from './QuestionCard';
 import GameOver from './GameOver';

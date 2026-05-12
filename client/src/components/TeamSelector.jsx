@@ -1,5 +1,6 @@
 import React from 'react';
 import TeamGallery  from './TeamGallery';
+import '../styles/SelectTeam.css'
 
 export default function TeamSelector({teams, onSelect}) {
 

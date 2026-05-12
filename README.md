@@ -117,12 +117,7 @@ For the app’s visual design, I created several custom images that I stored in 
 
 Originally, I experimented with using a short video clip of a puck drop as the loading screen. However, I ran into performance issues because the browser was already handling the API request to generate trivia questions, and loading the video at the same time caused delays and inconsistent playback. Realizing that most loading screens rely on lightweight animations or spinners for efficiency, I decided to replace the video with the animated Zamboni. It kept the hockey theme intact while providing a smoother and more reliable user experience during loading states.
 
-
-
-
-
-
-
 # Author and Project Context
 * Created by: Sharmaine Perea
+* edX: slp3md
 * Project Created for CS50 Intro to Compuer Science Final Project

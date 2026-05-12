@@ -1,0 +1,33 @@
+.trivia-card {
+  background-color: rgba(187, 182, 182, 0.5);
+  border-radius: 16px;
+  border: 2px groove rgb(172, 171, 171);
+  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+  padding: 8px;
+  margin: 0px 100px 50px 100px; 
+}
+
+.question-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 50px 0px 50px;
+}
+
+.question-button {
+    color: #e4e4e4;
+    background: #2f2b2b;
+    border: 5px ridge;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    height: 63px;
+    width: 75%;
+    text-align: center;
+    cursor: pointer;
+    opacity: 85%;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 14px;
+    font-weight: bold;
+}
