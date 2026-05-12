@@ -7,10 +7,11 @@ I am a huge hockey fan, so the idea behind the app was to create something fun f
 Rather than manually writing every trivia question, I integrated Claude API to dynamically generate questions, so that each session would feel unique and keep the gameplay fresh for friends competing against one another.
 
 # Application Flow:
-1.	From homepage click “Drop the Puck” to start the game
+1.	From homepage click "Play" on nav bar or “Drop the Puck” button to start the game
 2.	Select your team to test your knowledge
-3.	5 minutes to complete trivia game
-4.	Score displayed and button to start a new game to test your friend’s knowledge
+3.	5 minutes to complete trivia game, 30 sec each question
+4.  1 point per answer, max 10/10
+5.	Game ends, Score displayed and button to start a new game
 
 # Tools and Resources Featured in this Project:
 - [GitHub Repo](https://github.com/webdesigns23/Breakaway-Trivia)
@@ -24,7 +25,7 @@ Rather than manually writing every trivia question, I integrated Claude API to d
 - React
 - React-Router
 - Node.js
-- [API for questions](https://platform.claude.com/docs/en/home)
+- [Claude API for Questions](https://platform.claude.com/docs/en/home)
 
 # Set Up and Installation:
 1. Getting Started:
@@ -81,10 +82,8 @@ Setting up the API integration was straightforward thanks to the Claude API docu
 ### src/components
 I created the React application using Vite as the build tool. After removing the default boilerplate code, I set up the main parent components and routes that would be used in App.jsx. I used React Router to manage navigation throughout the application, and to keep the project modular and organized, I also created separate child components to handle specific pieces of functionality. Since the app is relatively small, I chose to keep all components within the same folder structure for simplicity and easier navigation. Below is an outline of the parent and child components used throughout the application.
 
-* NavBar.jsx
-	- Used { NavLink } from react-router-dom
-* Home.jsx
-	- Used { Link } for button to go to trivia game or can use nav bar
+* NavBar.jsx (Used { NavLink } from react-router-dom)
+* Home.jsx (Used { Link } for button to go to trivia game or can use nav bar)
 * TriviaGame.jsx
  	- Teams.js
 	- TeamSelector.jsx
@@ -92,8 +91,7 @@ I created the React application using Vite as the build tool. After removing the
 		- TeamCard.jsx
 	- QuestionsCard.jsx
 	- GameOver.jsx
-* Score.jsx
-	- For future top scores updated if needed
+* Score.jsx (For future top scores updated if needed)
 
 
 ### src/data/teams.js:
@@ -125,6 +123,6 @@ Originally, I experimented with using a short video clip of a puck drop as the l
 
 
 
-#Author and Project Context
+# Author and Project Context
 * Created by: Sharmaine Perea
 * Project Created for CS50 Intro to Compuer Science Final Project
