@@ -17,7 +17,7 @@ client = Anthropic(api_key= os.getenv("ANTHROPIC_API_KEY"))
 def get_questions():
 	team = request.json.get("team")
 
-	# claude API call
+	# Claude Anthropic API call
 	message = client.messages.create(
 		model="claude-sonnet-4-6",
 		max_tokens=1024,
