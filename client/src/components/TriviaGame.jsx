@@ -58,8 +58,7 @@ export default function TriviaGame() {
 				setQuestions([])
 				setCurrentIndex(0);
 				setScore(0);
-				setGameOver(false);
-			}
+				setGameOver(false);			}
 
 
 	return (

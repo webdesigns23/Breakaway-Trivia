@@ -4,6 +4,7 @@ export default function QuestionCard({question, checkAnswer, teamSelection, tota
 	const [ answers, setAnswers ] = useState([]);
 	const [ selected, setSelected ] = useState(null);
 	const [ timeLeft, setTimeLeft ] = useState(30);
+	const [ result, setResult ] = useState(null);
 	
 	// shuffle all answers
 	useEffect(() => {
@@ -25,6 +26,7 @@ export default function QuestionCard({question, checkAnswer, teamSelection, tota
 		// reset selection & timer
 		setSelected(null);
 		setTimeLeft(30);
+		setResult(null);
 
 	}, [question]);
 
@@ -48,10 +50,16 @@ export default function QuestionCard({question, checkAnswer, teamSelection, tota
 	// handle selection clicked
 	function handleClick(answer){
 		if (selected) return;
-
 		setSelected(answer);
-		// check answer
-		checkAnswer(answer === question.correct);
+
+		const isCorrect = (answer === question.correct);
+		setResult(isCorrect ? 'correct' : 'wrong');
+		
+		// check answer and wait for css result update
+		setTimeout(() => {
+			checkAnswer(isCorrect);
+		}, 2000);
+		
 	}
 
 
@@ -90,7 +98,10 @@ export default function QuestionCard({question, checkAnswer, teamSelection, tota
 						style={{
 							color:teamSelection.accent_color, 
 							background: teamSelection.primary_color,
-							borderColor: teamSelection.secondary_color,
+							borderColor: 
+							selected === answer && result === 'correct' ? 'green' :
+            				selected === answer && result === 'wrong' ? 'red' :
+							teamSelection.secondary_color,
 							borderWidth: '6px',
 							borderStyle: 'ridge'
 						}}
