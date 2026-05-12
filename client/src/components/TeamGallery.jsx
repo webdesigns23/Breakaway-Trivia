@@ -17,7 +17,9 @@ export default function TeamGallery({teams, onSelect}) {
 
 	return(
 		<>
-		<ConferenceFilter conFilter={conFilter} onChange={setConFilter}/>
+			<div clasName="filter">
+				<ConferenceFilter conFilter={conFilter} onChange={setConFilter}/>
+			</div>		
 		
 			<div className="gallery">
 				{filteredCon.map((team) => (

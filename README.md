@@ -102,9 +102,10 @@ For team information, I created a teams.js file containing an array of team obje
 -	primary_color: “hex color”
 -	secondary_color: "hex color”
 -	accent_color: "hex color"
+-   conference: "western"
 -	logo: “link to team logo”
 
-This data is used to dynamically generate team cards on the Trivia Game page, giving users a visual way to select their favorite team through team names and logos. The selected team name is then passed into the Claude Anthropic API call to generate trivia questions tailored specifically to that team.
+This data is used to dynamically generate team cards on the Trivia Game page, giving users a visual way to select their favorite team through team names and logos. Also added functionality to filter teams with radio buttons by conference. The selected team name is then passed into the Claude Anthropic API call to generate trivia questions tailored specifically to that team.
 Once the trivia game begins, I use each team’s color palette to dynamically style the trivia question cards, allowing the interface to visually reflect the branding and identity of the selected team throughout the game experience.
 
 ### src/styles  
